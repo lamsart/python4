@@ -1,0 +1,5 @@
+import cPickle as pickle
+x1 = pickle.load(open('simple1.pkl'))
+x2 = pickle.load(open('simple1.pkl'))
+result = [x1[i]+x2[i] for i in range(len(x1))]
+pickle.dump(result, open('result.pkl', 'w'))
